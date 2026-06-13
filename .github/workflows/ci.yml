@@ -1,0 +1,48 @@
+name: Website CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: true # Checkout submodules
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use Node.js 20
+
+      - name: Install Node.js dependencies
+        run: npm install
+        working-directory: ./website
+
+      - name: Build Astro project
+        run: npm run build
+        working-directory: ./website
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12' # Use Python 3.12
+
+      - name: Install uv
+        run: pip install uv
+
+      - name: Install Python dependencies
+        run: uv sync
+        working-directory: ./website
+
+      - name: Run tests
+        run: echo "No tests configured yet." # Placeholder for actual tests
+        working-directory: ./website
