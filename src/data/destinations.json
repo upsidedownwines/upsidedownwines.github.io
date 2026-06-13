@@ -1,0 +1,20 @@
+[
+    {
+        "id": "bordeaux",
+        "name": "Bordeaux, France",
+        "description": "Famous for its prestigious vineyards and châteaux.",
+        "image_url": "https://example.com/bordeaux.jpg"
+    },
+    {
+        "id": "napa-valley",
+        "name": "Napa Valley, USA",
+        "description": "A premier wine region known for its Cabernet Sauvignon.",
+        "image_url": "https://example.com/napa.jpg"
+    },
+    {
+        "id": "stellenbosch",
+        "name": "Stellenbosch, South Africa",
+        "description": "Picturesque wine region with a rich history and diverse wines.",
+        "image_url": "https://example.com/stellenbosch.jpg"
+    }
+]

@@ -1,0 +1,16 @@
+[project]
+name = "website"
+version = "0.1.0"
+description = "Website for Upsidedown Wines"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+]
+
+
+
+[tool.uv]
+dev-dependencies = [
+    "pytest",
+    "httpx",
+]

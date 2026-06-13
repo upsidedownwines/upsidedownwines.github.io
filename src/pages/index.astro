@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Welcome from '../components/Welcome.astro';
+---
+
+<Layout title="Welcome to Upsidedown Wines!">
+	<main class="max-w-4xl mx-auto py-8 px-4">
+		<Welcome />
+		<section class="my-8 p-6 bg-white rounded-lg shadow-md">
+			<h2 class="text-3xl font-semibold text-gray-800 mb-4">Stay Updated with Exclusive Offers</h2>
+			<p class="text-gray-600 mb-4">Join our community to receive curated wine travel tips, exclusive deals, and early access to new destinations.</p>
+			<form action="/newsletter-signup" method="POST" class="flex flex-col sm:flex-row gap-4">
+				<input type="email" name="email" placeholder="Your email address" required class="flex-grow p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
+				<button type="submit" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition duration-300">Subscribe Now</button>
+			</form>
+		</section>
+	</main>
+</Layout>
